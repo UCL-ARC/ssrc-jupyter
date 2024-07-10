@@ -1,6 +1,5 @@
 locals {
   prefix     = var.vm_prefix
-  cidr       = "/24"
   access_url = ""
 }
 
