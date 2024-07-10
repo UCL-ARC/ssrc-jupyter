@@ -1,6 +1,7 @@
 locals {
-  prefix = var.vm_prefix
-  cidr   = "/24"
+  prefix     = var.vm_prefix
+  cidr       = "/24"
+  access_url = ""
 }
 
 data "harvester_image" "alma9" {
