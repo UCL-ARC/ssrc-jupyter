@@ -1,11 +1,11 @@
 variable "namespace" {
   type = string
-  value = "ssrc-ns"
+  default = "ssrc-ns"
 }
 
 variable "network_name" {
   type = string
-  value = "ssrc-net"
+  default = "ssrc-net"
 }
 
 variable "os_disk_gb" {
@@ -34,5 +34,5 @@ variable "vm_count" {
 
 variable "vm_prefix" {
   type = string
-  value = "jupyter"
+  default = "jupyter"
 }
