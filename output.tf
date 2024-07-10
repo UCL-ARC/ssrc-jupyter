@@ -1,4 +1,5 @@
 # List your outputs here.
-output "random_val" {
-  value = local.my_output
+output "access_url" {
+  value = local.access_url
+  description = "The URL from which Jupyter can be accessed"
 }
