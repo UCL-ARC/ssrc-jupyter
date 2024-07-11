@@ -9,5 +9,14 @@ until /usr/local/bin/kubectl get pods -A &> /dev/null; do
   sleep 5
 done
 
+# Set up kubeconfig
 chmod go-r /etc/rancher/k3s/k3s.yaml
 echo "export KUBECONFIG=/etc/rancher/k3s/k3s.yaml" >> /root/.bash_profile
+
+# And autocompletion
+source <(kubectl completion bash)
+kubectl completion bash > /root/.kube/completion.bash.inc
+printf "
+# kubectl shell completion
+source '/root/.kube/completion.bash.inc'
+" >> /root/.bash_profile
