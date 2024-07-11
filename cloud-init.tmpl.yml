@@ -33,7 +33,7 @@ runcmd:
     - enable
     - --now
     - qemu-guest-agent.service
-  - /tmp/install_k3s.sh
+  - bash /tmp/install_k3s.sh
 
 ssh_authorized_keys:
   - ${public_key_openssh}
