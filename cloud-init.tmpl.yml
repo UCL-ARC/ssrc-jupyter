@@ -4,11 +4,21 @@ write_files:
       ${install_k3s_script}
     path: /tmp/install_k3s.sh
     permissions: '0777'
+  - content: |
+      ${jupyterhub_config}
+    path: /root/jupyterhub_config.yaml
+    permissions: '0777'
+  - content: |
+      ${install_jupyterhub_script}
+    path: /root/install_jupyterhub.sh
+    permissions: '0777'
 
 package_update: true
 
 packages:
   - qemu-guest-agent
+  - bash-completion
+  - vim
 
 yum_repos:
   baseos:

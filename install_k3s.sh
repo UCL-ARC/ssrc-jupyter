@@ -8,3 +8,6 @@ curl https://get.k3s.io | \
 until /usr/local/bin/kubectl get pods -A &> /dev/null; do
   sleep 5
 done
+
+chmod go-r /etc/rancher/k3s/k3s.yaml
+echo "export KUBECONFIG=/etc/rancher/k3s/k3s.yaml" >> /root/.bash_profile
