@@ -11,3 +11,5 @@ helm upgrade --cleanup-on-fail \
   --namespace jupyter --create-namespace \
   --version=3.3.7 \
   --values jupyterhub-config.yaml
+
+kubectl config set-context $(kubectl config current-context) --namespace jupyterhub
