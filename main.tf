@@ -14,6 +14,7 @@ resource "harvester_cloudinit_secret" "cloud-config-jupyter" {
 
   user_data = templatefile("${path.module}/cloud-init.tmpl.yml", {
     public_key_openssh = var.public_key_openssh
+    install_k3s_script = indent(6, file("${path.module}/install_k3s.sh"))
   })
 }
 

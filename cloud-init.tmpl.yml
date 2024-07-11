@@ -1,4 +1,10 @@
 #cloud-config
+write_files:
+  - content: |
+      ${install_k3s_script}
+    path: /tmp/install_k3s.sh
+    permissions: '0777'
+
 package_update: true
 
 packages:
@@ -17,6 +23,7 @@ runcmd:
     - enable
     - --now
     - qemu-guest-agent.service
+  - /tmp/install_k3s.sh
 
 ssh_authorized_keys:
   - ${public_key_openssh}
