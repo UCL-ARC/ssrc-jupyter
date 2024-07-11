@@ -56,7 +56,7 @@ resource "harvester_virtualmachine" "vm" {
     bus        = "virtio"
     boot_order = 1
 
-    image       = data.harvester_image.alma9.id
+    image       = data.harvester_image.rhel9.id
     auto_delete = true
   }
 
