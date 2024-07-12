@@ -23,13 +23,13 @@ variable "public_key_openssh" {
 
 variable "ram_gb" {
   type        = string
-  default     = "8Gi"
+  default     = "16Gi"
   description = "Amount of memory for the VM"
 }
 
 variable "vcpu" {
   type        = number
-  default     = 2
+  default     = 4
   description = "Number of CPUs for the VM"
 }
 

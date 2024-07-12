@@ -19,6 +19,7 @@ packages:
   - qemu-guest-agent
   - bash-completion
   - vim
+  - git
 
 yum_repos:
   baseos:
