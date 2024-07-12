@@ -1,10 +1,10 @@
 locals {
   prefix     = var.vm_prefix
-  access_url = ""
+  access_url = "${var.vm_prefix}.ucl-arc.dev/"
 }
 
 data "harvester_image" "rhel9" {
-  display_name = "rhel-9.3-base-2024.03.09.01.qcow2"
+  display_name = "almalinux-9.4-20240507"
   namespace    = "harvester-public"
 }
 
@@ -31,7 +31,7 @@ resource "harvester_virtualmachine" "vm" {
   description = "SSRC Jupyter"
 
   tags = {
-    ssh-user = "cloud-user"
+    ssh-user = "almalinux"
   }
 
   cpu    = var.vcpu
