@@ -1,0 +1,20 @@
+---
+name: JupyterHub Server Request
+description: Create a new JupyterHub server
+body:
+  - type: textarea
+    id: workstream_description
+    attributes:
+      label: Requirements
+      description: A short description of how many people expect to use the server and what resources are required (e.g. GPUs).
+      placeholder: Description
+    validations:
+      required: false
+  - type: input
+    id: child_issues
+    attributes:
+      label: Point of Contact
+      description: Who should be contacted to manage access
+      placeholder: Email address
+    validations:
+      required: false
