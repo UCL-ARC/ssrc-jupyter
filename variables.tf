@@ -35,7 +35,7 @@ variable "vcpu" {
 
 variable "vm_count" {
   type        = number
-  default     = 2
+  default     = 1
   description = "Number of instances of the VM"
 }
 
