@@ -8,7 +8,8 @@
 2. Deploy the Terraform module
 3. Wait for `cloud-init` to finish configuring k3s on the VM
 4. Log into the VM and become root
-5. Fill out the `jupyterhub_config.yaml` file with data from a suitable AzureAD app registration
+5. Fill out the `jupyterhub_config.yaml` file with data from a
+   suitable AzureAD app registration
 6. Run the `install_jupyterhub.sh` script
 
 ## References
