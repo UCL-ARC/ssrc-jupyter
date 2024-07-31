@@ -1,4 +1,4 @@
 variable "public_key_openssh" {
-  type        = string
+  type        = list(string)
   description = "Public SSH key installed on the VM"
 }
