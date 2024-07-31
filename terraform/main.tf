@@ -1,4 +1,4 @@
-module "dept" {
+module "ssrc-jupyter-dept" {
   source = "./modules/jupyter"
 
   vm_count = 1
