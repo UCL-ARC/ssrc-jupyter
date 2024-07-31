@@ -1,4 +1,4 @@
-# SSRC Jupyter Instance
+# ssrc-jupyter
 
 ![SSRC-Jupyter diagram](../docs/ssrc-jupyter.drawio.svg)
 
