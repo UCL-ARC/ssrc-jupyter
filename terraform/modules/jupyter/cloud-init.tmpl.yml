@@ -37,4 +37,6 @@ runcmd:
   - bash /tmp/install_k3s.sh
 
 ssh_authorized_keys:
-  - ${public_key_openssh}
+%{ for key in public_key_openssh ~}
+  - ${key}
+%{ endfor ~}
