@@ -1,5 +1,6 @@
 variable "disk_settings" {
   type        = map(string)
+  default     = {}
   description = "A map of disk settings"
 }
 
