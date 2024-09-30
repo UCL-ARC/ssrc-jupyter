@@ -15,6 +15,11 @@ variable "namespace" {
   description = "Namespace for the storage"
 }
 
+variable "network_name" {
+  type        = string
+  description = "Name of the SSRC network"
+}
+
 variable "ssh_username" {
   type        = string
   default     = "cloud-user"

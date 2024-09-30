@@ -18,8 +18,9 @@ module "ssrc-jupyter-dept" {
 module "online-storage-dept" {
   source = "./modules/online-storage"
 
-  namespace = "ssrc-ns"
-  vm_prefix = "ssrc-nfs-dept"
+  namespace    = "ssrc-ns"
+  network_name = "ssrc-net"
+  vm_prefix    = "ssrc-nfs-dept"
 
   disk_settings = {
 

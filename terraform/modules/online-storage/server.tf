@@ -23,14 +23,10 @@ resource "harvester_virtualmachine" "server" {
   efi = true
 
   network_interface {
-    name           = "default"
-    wait_for_lease = true
-  }
-
-  network_interface {
     name           = "nic-1"
-    network_name   = "default/net"
     wait_for_lease = true
+    type           = "bridge"
+    network_name   = var.network_name
   }
 
   disk {
