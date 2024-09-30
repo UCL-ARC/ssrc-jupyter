@@ -21,11 +21,6 @@ variable "ssh_username" {
   description = "SSH username for the VM"
 }
 
-variable "image_id" {
-  type        = string
-  description = "ID of the VM image"
-}
-
 variable "public_key_openssh" {
   type        = string
   description = "SSH public key"

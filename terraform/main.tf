@@ -20,7 +20,6 @@ module "online-storage-dept" {
 
   namespace = "ssrc-ns"
   vm_prefix = "ssrc-nfs-dept"
-  image_id  = data.harvester_image.rhel9.id
 
   disk_settings = {
 
