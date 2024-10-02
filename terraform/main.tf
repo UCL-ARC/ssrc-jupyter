@@ -10,7 +10,7 @@ module "ssrc-jupyter-dept" {
   vm_prefix = "ssrc-jupyter-dept"
 
   namespace    = "ssrc-ns"
-  network_name = "ssrc-net"
+  network_name = "ssrc-net-0"
 
   public_key_openssh = var.public_key_openssh
 }
