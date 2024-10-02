@@ -31,7 +31,7 @@ No modules.
 | <a name="input_disk_settings"></a> [disk\_settings](#input\_disk\_settings) | A map of disk settings | `map(string)` | `{}` | no |
 | <a name="input_namespace"></a> [namespace](#input\_namespace) | Namespace for the storage | `string` | n/a | yes |
 | <a name="input_network_name"></a> [network\_name](#input\_network\_name) | Name of the SSRC network | `string` | n/a | yes |
-| <a name="input_public_key_openssh"></a> [public\_key\_openssh](#input\_public\_key\_openssh) | SSH public key | `string` | n/a | yes |
+| <a name="input_public_key_openssh"></a> [public\_key\_openssh](#input\_public\_key\_openssh) | SSH public key | `list(string)` | n/a | yes |
 | <a name="input_ssh_username"></a> [ssh\_username](#input\_ssh\_username) | SSH username for the VM | `string` | `"cloud-user"` | no |
 | <a name="input_vm_prefix"></a> [vm\_prefix](#input\_vm\_prefix) | Name of the VM | `string` | `"nfs"` | no |
 
