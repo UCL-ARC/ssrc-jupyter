@@ -39,7 +39,7 @@ variable "public_key_openssh" {
 }
 
 variable "condenser_ingress_enabled" {
-  type        = boolean
+  type        = bool
   description = "Enable web access to the server"
 }
 
