@@ -14,3 +14,17 @@ module "ssrc-jupyter-dept" {
 
   public_key_openssh = var.public_key_openssh
 }
+
+module "online-storage-dept" {
+  source = "./modules/online-storage"
+
+  namespace    = "ssrc-ns"
+  network_name = "ssrc-net-0"
+  vm_prefix    = "ssrc-nfs-dept"
+
+  disk_settings = {
+
+  }
+
+  public_key_openssh = var.public_key_openssh
+}

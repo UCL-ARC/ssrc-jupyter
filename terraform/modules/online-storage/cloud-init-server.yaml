@@ -1,0 +1,54 @@
+#cloud-config
+
+bootcmd:
+  - ip route del default via 10.0.2.1 dev eth0
+  - ip route add default via 10.0.2.1 dev eth0 metric 150
+
+package_update: true
+
+packages:
+  - qemu-guest-agent
+  - vim
+  - lvm2
+  - nfs-utils
+
+write_files:
+- content: |
+    /mnt *(ro,sync,root_squash)
+  path: /etc/exports
+
+mounts:
+- [ /dev/online-storage-vg/online-storage, /mnt, auto, "defaults,nofail" ]
+
+runcmd:
+  - - systemctl
+    - enable
+    - --now
+    - qemu-guest-agent.service
+  - - firewall-cmd
+    - --permanent
+    - --add-service
+    - nfs
+  - - firewall-cmd
+    - --reload
+  - - systemctl
+    - enable
+    - --now
+    - nfs-server
+
+ssh_authorized_keys:
+%{ for key in public_key_openssh ~}
+  - ${key}
+%{ endfor ~}
+
+yum_repos:
+  baseos:
+    baseurl: http://172.22.1.220:80//install/rhels9.2.0/x86_64/BaseOS
+    enabled: true
+    gpgcheck: false
+    name: xCAT configured yum repository for /install/rhels9.2.0/x86_64/BaseOS
+  appstream:
+    baseurl: http://172.22.1.220:80//install/rhels9.2.0/x86_64/AppStream
+    enabled: true
+    gpgcheck: false
+    name: xCAT configured yum repository for /install/rhels9.2.0/x86_64/AppStream

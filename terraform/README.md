@@ -33,6 +33,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
+| <a name="module_online-storage-dept"></a> [online-storage-dept](#module\_online-storage-dept) | ./modules/online-storage | n/a |
 | <a name="module_ssrc-jupyter-dept"></a> [ssrc-jupyter-dept](#module\_ssrc-jupyter-dept) | ./modules/jupyter | n/a |
 
 ## Resources
