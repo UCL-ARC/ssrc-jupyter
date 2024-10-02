@@ -48,9 +48,7 @@ No resources.
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| <a name="output_ip_address"></a> [ip\_address](#output\_ip\_address) | The JupyterHub server's IP address |
+No outputs.
 
 ---
 <!-- END_TF_DOCS -->

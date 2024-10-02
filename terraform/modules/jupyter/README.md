@@ -44,7 +44,6 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_access_url"></a> [access\_url](#output\_access\_url) | The URL from which Jupyter can be accessed |
-| <a name="output_ip_address"></a> [ip\_address](#output\_ip\_address) | The server's IP address |
 
 ---
 <!-- END_TF_DOCS -->
