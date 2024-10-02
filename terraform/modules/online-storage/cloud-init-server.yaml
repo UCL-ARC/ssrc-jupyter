@@ -37,7 +37,9 @@ runcmd:
     - nfs-server
 
 ssh_authorized_keys:
-  - ${public_key_openssh}
+%{ for key in public_key_openssh ~}
+  - ${key}
+%{ endfor ~}
 
 yum_repos:
   baseos:
