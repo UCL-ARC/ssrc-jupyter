@@ -13,6 +13,9 @@ module "ssrc-jupyter-dept" {
   network_name = "ssrc-net-0"
 
   public_key_openssh = var.public_key_openssh
+
+  condenser_ingress_enabled       = true
+  condenser_ingress_test_hostname = "jupyter-dept"
 }
 
 module "online-storage-dept" {
