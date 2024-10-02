@@ -37,3 +37,13 @@ variable "public_key_openssh" {
   type        = list(string)
   description = "Public SSH key installed on the VM"
 }
+
+variable "condenser_ingress_enabled" {
+  type        = boolean
+  description = "Enable web access to the server"
+}
+
+variable "condenser_ingress_test_hostname" {
+  type        = string
+  description = "Part of the URL for the web application"
+}

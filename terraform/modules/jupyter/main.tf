@@ -31,7 +31,9 @@ resource "harvester_virtualmachine" "vm" {
   description = "SSRC Jupyter"
 
   tags = {
-    ssh-user = "almalinux"
+    ssh-user                        = "almalinux"
+    condenser_ingress_enabled       = var.condenser_ingress_enabled
+    condenser_ingress_test_hostname = var.condenser_ingress_test_hostname
   }
 
   cpu    = var.vcpu
