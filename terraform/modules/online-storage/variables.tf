@@ -27,6 +27,6 @@ variable "ssh_username" {
 }
 
 variable "public_key_openssh" {
-  type        = string
+  type        = list(string)
   description = "SSH public key"
 }
