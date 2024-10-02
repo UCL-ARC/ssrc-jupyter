@@ -30,6 +30,8 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_condenser_ingress_enabled"></a> [condenser\_ingress\_enabled](#input\_condenser\_ingress\_enabled) | Enable web access to the server | `boolean` | n/a | yes |
+| <a name="input_condenser_ingress_test_hostname"></a> [condenser\_ingress\_test\_hostname](#input\_condenser\_ingress\_test\_hostname) | Part of the URL for the web application | `string` | n/a | yes |
 | <a name="input_namespace"></a> [namespace](#input\_namespace) | Name of the SSRC namespace | `string` | n/a | yes |
 | <a name="input_network_name"></a> [network\_name](#input\_network\_name) | Name of the SSRC network | `string` | n/a | yes |
 | <a name="input_os_disk_gb"></a> [os\_disk\_gb](#input\_os\_disk\_gb) | Size of the VM's primary disk | `string` | n/a | yes |
