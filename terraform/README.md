@@ -33,6 +33,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
+| <a name="module_online-storage-dept"></a> [online-storage-dept](#module\_online-storage-dept) | ./modules/online-storage | n/a |
 | <a name="module_ssrc-jupyter-dept"></a> [ssrc-jupyter-dept](#module\_ssrc-jupyter-dept) | ./modules/jupyter | n/a |
 
 ## Resources
@@ -47,7 +48,9 @@ No resources.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_ip_address"></a> [ip\_address](#output\_ip\_address) | The JupyterHub server's IP address |
 
 ---
 <!-- END_TF_DOCS -->
