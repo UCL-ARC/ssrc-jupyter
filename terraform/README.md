@@ -22,8 +22,8 @@
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.8.5 |
-| <a name="requirement_harvester"></a> [harvester](#requirement\_harvester) | 0.6.4 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.9.6 |
+| <a name="requirement_harvester"></a> [harvester](#requirement\_harvester) | 0.6.5 |
 
 ## Providers
 

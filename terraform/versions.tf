@@ -1,11 +1,11 @@
 terraform {
 
-  required_version = "1.8.5"
+  required_version = "1.9.6"
 
   required_providers {
     harvester = {
       source  = "harvester/harvester"
-      version = "0.6.4"
+      version = "0.6.5"
     }
   }
 
