@@ -38,7 +38,7 @@ variable "public_key_openssh" {
   description = "Public SSH key installed on the VM"
 }
 
-variable "condenser_ingress_enabled" {
+variable "condenser_ingress_isEnabled" {
   type        = bool
   description = "Enable web access to the server"
 }

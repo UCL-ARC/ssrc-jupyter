@@ -32,7 +32,7 @@ resource "harvester_virtualmachine" "vm" {
 
   tags = {
     ssh-user                        = "almalinux"
-    condenser_ingress_enabled       = var.condenser_ingress_enabled
+    condenser_ingress_isEnabled     = var.condenser_ingress_isEnabled
     condenser_ingress_test_hostname = var.condenser_ingress_test_hostname
   }
 
