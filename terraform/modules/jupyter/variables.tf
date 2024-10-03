@@ -47,3 +47,21 @@ variable "condenser_ingress_test_hostname" {
   type        = string
   description = "Part of the URL for the web application"
 }
+
+variable "aad_client_id" {
+  type = string
+}
+
+variable "aad_client_secret" {
+  type      = string
+  sensitive = true
+}
+
+variable "aad_tenant_id" {
+  type = string
+}
+
+variable "z2jupyterhub_version" {
+  type        = string
+  description = "Version of the z2jupyterhub helm chart"
+}

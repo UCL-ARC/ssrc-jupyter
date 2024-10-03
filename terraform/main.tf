@@ -7,12 +7,18 @@ module "ssrc-jupyter-dept" {
   ram_gb     = "16Gi"
   os_disk_gb = "50Gi"
 
-  vm_prefix = "ssrc-jupyter-dept"
+  vm_prefix = "jupyter-dept"
 
   namespace    = "ssrc-ns"
   network_name = "ssrc-net-0"
 
   public_key_openssh = var.public_key_openssh
+
+  z2jupyterhub_version = "3.3.8"
+
+  aad_client_id     = var.aad_client_id
+  aad_client_secret = var.aad_client_secret
+  aad_tenant_id     = var.aad_tenant_id
 
   condenser_ingress_isEnabled     = true
   condenser_ingress_test_hostname = "jupyter-dept"
