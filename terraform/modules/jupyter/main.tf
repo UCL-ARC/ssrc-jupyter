@@ -14,7 +14,12 @@ resource "harvester_cloudinit_secret" "cloud-config-jupyter" {
 
   user_data = templatefile("${path.module}/cloud-init.tmpl.yml", {
     public_key_openssh = var.public_key_openssh
-    install_k3s_script = indent(6, file("${path.module}/install_k3s.sh"))
+    install_k3s_script = indent(6, templatefile(
+      "${path.module}/install_k3s.sh",
+      {
+        k3s_version = var.k3s_version
+      }
+    ))
     jupyterhub_config = indent(6, templatefile(
       "${path.module}/jupyterhub_config.yaml",
       {
@@ -29,6 +34,7 @@ resource "harvester_cloudinit_secret" "cloud-config-jupyter" {
       "${path.module}/install_jupyterhub.sh",
       {
         z2jupyterhub_version = var.z2jupyterhub_version
+        calico_version       = var.calico_version
       }
     ))
   })

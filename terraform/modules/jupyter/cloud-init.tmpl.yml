@@ -35,6 +35,7 @@ runcmd:
     - --now
     - qemu-guest-agent.service
   - bash /tmp/install_k3s.sh
+  - bash /root/install_jupyterhub.sh
 
 ssh_authorized_keys:
 %{ for key in public_key_openssh ~}

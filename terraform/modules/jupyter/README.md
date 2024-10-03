@@ -33,8 +33,10 @@ No modules.
 | <a name="input_aad_client_id"></a> [aad\_client\_id](#input\_aad\_client\_id) | n/a | `string` | n/a | yes |
 | <a name="input_aad_client_secret"></a> [aad\_client\_secret](#input\_aad\_client\_secret) | n/a | `string` | n/a | yes |
 | <a name="input_aad_tenant_id"></a> [aad\_tenant\_id](#input\_aad\_tenant\_id) | n/a | `string` | n/a | yes |
+| <a name="input_calico_version"></a> [calico\_version](#input\_calico\_version) | Version of calico | `string` | n/a | yes |
 | <a name="input_condenser_ingress_isEnabled"></a> [condenser\_ingress\_isEnabled](#input\_condenser\_ingress\_isEnabled) | Enable web access to the server | `bool` | n/a | yes |
 | <a name="input_condenser_ingress_test_hostname"></a> [condenser\_ingress\_test\_hostname](#input\_condenser\_ingress\_test\_hostname) | Part of the URL for the web application | `string` | n/a | yes |
+| <a name="input_k3s_version"></a> [k3s\_version](#input\_k3s\_version) | Version of k3s | `string` | n/a | yes |
 | <a name="input_namespace"></a> [namespace](#input\_namespace) | Name of the SSRC namespace | `string` | n/a | yes |
 | <a name="input_network_name"></a> [network\_name](#input\_network\_name) | Name of the SSRC network | `string` | n/a | yes |
 | <a name="input_os_disk_gb"></a> [os\_disk\_gb](#input\_os\_disk\_gb) | Size of the VM's primary disk | `string` | n/a | yes |
