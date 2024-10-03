@@ -8,3 +8,29 @@
 # Chart default values:     https://github.com/jupyterhub/zero-to-jupyterhub-k8s/blob/HEAD/jupyterhub/values.yaml
 # Available chart versions: https://hub.jupyter.org/helm-chart/
 #
+debug:
+  enabled: true
+hub:
+  config:
+    AzureAdOAuthenticator:
+      client_id: ${aad_client_id}
+      client_secret: ${aad_client_secret}
+      oauth_callback_url: https://${hostname}.ssrc.condenser.arc.ucl.ac.uk/hub/oauth_callback
+      tenant_id: ${aad_tenant_id}
+      allow_all: true
+    JupyterHub:
+      authenticator_class: azuread
+    KubeSpawner:
+      k8s_api_request_timeout: 300
+singleuser:
+  image:
+    # Other images: https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html
+    # You should replace the "latest" tag with a fixed version from:
+    # https://hub.docker.com/r/jupyter/datascience-notebook/tags/
+    # Inspect the Dockerfile at:
+    # https://github.com/jupyter/docker-stacks/tree/HEAD/datascience-notebook/Dockerfile
+    name: jupyter/datascience-notebook
+    tag: x86_64-ubuntu-22.04
+  # `cmd: null` allows the custom CMD of the Jupyter docker-stacks to be used
+  # which performs further customization on startup.
+  cmd: null
