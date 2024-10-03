@@ -13,3 +13,7 @@ helm upgrade --cleanup-on-fail \
   --values jupyterhub_config.yaml
 
 kubectl config set-context $(kubectl config current-context) --namespace jupyterhub
+
+# enable ingress
+kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/${calico_version}/manifests/tigera-operator.yaml
+kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/${calico_version}/manifests/custom-resources.yaml

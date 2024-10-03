@@ -34,6 +34,7 @@ resource "harvester_cloudinit_secret" "cloud-config-jupyter" {
       "${path.module}/install_jupyterhub.sh",
       {
         z2jupyterhub_version = var.z2jupyterhub_version
+        calico_version = var.calico_version
       }
     ))
   })
