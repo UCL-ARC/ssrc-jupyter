@@ -19,7 +19,7 @@ resource "harvester_cloudinit_secret" "cloud-config-jupyter" {
       {
         k3s_version = var.k3s_version
       }
-      ))
+    ))
     jupyterhub_config = indent(6, templatefile(
       "${path.module}/jupyterhub_config.yaml",
       {
@@ -34,7 +34,7 @@ resource "harvester_cloudinit_secret" "cloud-config-jupyter" {
       "${path.module}/install_jupyterhub.sh",
       {
         z2jupyterhub_version = var.z2jupyterhub_version
-        calico_version = var.calico_version
+        calico_version       = var.calico_version
       }
     ))
   })

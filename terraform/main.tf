@@ -14,9 +14,9 @@ module "ssrc-jupyter-dept" {
 
   public_key_openssh = var.public_key_openssh
 
-  z2jupyterhub_version = "3.3.8" # https://github.com/jupyterhub/zero-to-jupyterhub-k8s/tags
-  k3s_version = "v1.31.1+k3s1" # https://github.com/k3s-io/k3s/releases/
-  calico_version = "v3.28.2" # https://github.com/projectcalico/calico/releases
+  z2jupyterhub_version = "3.3.8"        # https://github.com/jupyterhub/zero-to-jupyterhub-k8s/tags
+  k3s_version          = "v1.31.1+k3s1" # https://github.com/k3s-io/k3s/releases/
+  calico_version       = "v3.28.2"      # https://github.com/projectcalico/calico/releases
 
   aad_client_id     = var.aad_client_id
   aad_client_secret = var.aad_client_secret

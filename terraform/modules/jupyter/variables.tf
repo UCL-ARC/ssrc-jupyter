@@ -67,12 +67,12 @@ variable "z2jupyterhub_version" {
 }
 
 variable "k3s_version" {
-    type        = string
+  type        = string
   description = "Version of k3s"
 }
 
 
 variable "calico_version" {
-    type        = string
+  type        = string
   description = "Version of calico"
 }
