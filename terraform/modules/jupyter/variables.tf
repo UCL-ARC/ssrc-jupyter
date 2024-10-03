@@ -71,7 +71,6 @@ variable "k3s_version" {
   description = "Version of k3s"
 }
 
-
 variable "calico_version" {
   type        = string
   description = "Version of calico"
