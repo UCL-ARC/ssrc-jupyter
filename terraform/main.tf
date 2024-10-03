@@ -14,7 +14,7 @@ module "ssrc-jupyter-dept" {
 
   public_key_openssh = var.public_key_openssh
 
-  condenser_ingress_enabled       = true
+  condenser_ingress_isEnabled     = true
   condenser_ingress_test_hostname = "jupyter-dept"
 }
 
