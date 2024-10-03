@@ -13,18 +13,18 @@ resource "harvester_cloudinit_secret" "cloud-config-jupyter" {
   namespace = var.namespace
 
   user_data = templatefile("${path.module}/cloud-init.tmpl.yml", {
-    public_key_openssh        = var.public_key_openssh
-    install_k3s_script        = indent(6, file("${path.module}/install_k3s.sh"))
-    jupyterhub_config         = indent(6, templatefile(
+    public_key_openssh = var.public_key_openssh
+    install_k3s_script = indent(6, file("${path.module}/install_k3s.sh"))
+    jupyterhub_config = indent(6, templatefile(
       "${path.module}/jupyterhub_config.yaml",
       {
-        hostname = var.vm_prefix
-        aad_client_id = var.aad_client_id
+        hostname          = var.vm_prefix
+        aad_client_id     = var.aad_client_id
         aad_client_secret = var.aad_client_secret
-        aad_tenant_id = var.aad_tenant_id
+        aad_tenant_id     = var.aad_tenant_id
       }
       )
-      )
+    )
     install_jupyterhub_script = indent(6, file("${path.module}/install_jupyterhub.sh"))
   })
 }

@@ -53,7 +53,7 @@ variable "aad_client_id" {
 }
 
 variable "aad_client_secret" {
-  type = string
+  type      = string
   sensitive = true
 }
 
