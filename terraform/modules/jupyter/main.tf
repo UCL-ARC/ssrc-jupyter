@@ -17,8 +17,8 @@ resource "harvester_cloudinit_secret" "cloud-config-jupyter" {
     install_k3s_script = indent(6, templatefile(
       "${path.module}/install_k3s.sh",
       {
-        k3s_version = var.k3s_version
-        calico_version       = var.calico_version
+        k3s_version    = var.k3s_version
+        calico_version = var.calico_version
       }
     ))
     jupyterhub_config = indent(6, templatefile(
