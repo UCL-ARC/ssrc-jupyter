@@ -18,6 +18,7 @@ resource "harvester_cloudinit_secret" "cloud-config-jupyter" {
       "${path.module}/install_k3s.sh",
       {
         k3s_version = var.k3s_version
+        calico_version       = var.calico_version
       }
     ))
     jupyterhub_config = indent(6, templatefile(
@@ -34,7 +35,6 @@ resource "harvester_cloudinit_secret" "cloud-config-jupyter" {
       "${path.module}/install_jupyterhub.sh",
       {
         z2jupyterhub_version = var.z2jupyterhub_version
-        calico_version       = var.calico_version
       }
     ))
   })
@@ -68,7 +68,7 @@ resource "harvester_virtualmachine" "vm" {
   machine_type    = "q35"
 
   network_interface {
-    name           = "nic-1"
+    name           = "default"
     wait_for_lease = true
     type           = "bridge"
     network_name   = var.network_name
