@@ -60,3 +60,8 @@ variable "aad_client_secret" {
 variable "aad_tenant_id" {
   type = string
 }
+
+variable "z2jupyterhub_version" {
+  type = string
+  description = "Version of the z2jupyterhub helm chart"
+}

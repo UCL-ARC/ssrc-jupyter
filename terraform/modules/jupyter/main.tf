@@ -25,7 +25,12 @@ resource "harvester_cloudinit_secret" "cloud-config-jupyter" {
       }
       )
     )
-    install_jupyterhub_script = indent(6, file("${path.module}/install_jupyterhub.sh"))
+    install_jupyterhub_script = indent(6, templatefile(
+      "${path.module}/install_jupyterhub.sh",
+      {
+        z2jupyterhub_version = var.z2jupyterhub_version
+      }
+      ))
   })
 }
 

@@ -7,9 +7,9 @@ curl https://raw.githubusercontent.com/helm/helm/HEAD/scripts/get-helm-3 | bash
 helm repo add jupyterhub https://hub.jupyter.org/helm-chart/
 helm repo update
 helm upgrade --cleanup-on-fail \
-  --install demo jupyterhub/jupyterhub \
+  --install jupyterhub jupyterhub/jupyterhub \
   --namespace jupyterhub --create-namespace \
-  --version=3.3.7 \
+  --version=${z2jupyterhub_version} \
   --values jupyterhub_config.yaml
 
 kubectl config set-context $(kubectl config current-context) --namespace jupyterhub
