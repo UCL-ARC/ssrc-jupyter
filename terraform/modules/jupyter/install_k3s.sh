@@ -20,3 +20,9 @@ printf "
 # kubectl shell completion
 source '/root/.kube/completion.bash.inc'
 " >> /root/.bash_profile
+
+kubectl wait --namespace=kube-system --for=condition=Ready pod -l k8s-app=metrics-server
+
+# enable ingress
+kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/${calico_version}/manifests/tigera-operator.yaml
+kubectl create -f https://raw.githubusercontent.com/projectcalico/calico/${calico_version}/manifests/custom-resources.yaml
