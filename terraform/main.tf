@@ -14,7 +14,8 @@ module "ssrc-jupyter-dept" {
 
   public_key_openssh = var.public_key_openssh
 
-  z2jupyterhub_version = "3.3.8"
+  z2jupyterhub_version = "3.3.8" # https://github.com/jupyterhub/zero-to-jupyterhub-k8s/tags
+  k3s_version = "v1.31.1+k3s1" # https://github.com/k3s-io/k3s/releases/
 
   aad_client_id     = var.aad_client_id
   aad_client_secret = var.aad_client_secret

@@ -65,3 +65,8 @@ variable "z2jupyterhub_version" {
   type        = string
   description = "Version of the z2jupyterhub helm chart"
 }
+
+variable "k3s_version" {
+    type        = string
+  description = "Version of k3s"
+}
