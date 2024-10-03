@@ -62,6 +62,6 @@ variable "aad_tenant_id" {
 }
 
 variable "z2jupyterhub_version" {
-  type = string
+  type        = string
   description = "Version of the z2jupyterhub helm chart"
 }

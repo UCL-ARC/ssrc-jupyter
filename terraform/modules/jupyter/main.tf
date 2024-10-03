@@ -30,7 +30,7 @@ resource "harvester_cloudinit_secret" "cloud-config-jupyter" {
       {
         z2jupyterhub_version = var.z2jupyterhub_version
       }
-      ))
+    ))
   })
 }
 
