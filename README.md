@@ -77,7 +77,7 @@ Web access to the server is controlled by the Azure AD application.
 
 You can directly administer a deployed JupyterHub server, as described [here](https://z2jh.jupyter.org/en/stable/jupyterhub/customizing/extending-jupyterhub.html#applying-configuration-changes).
 
-> ![IMPORTANT]
+> [!IMPORTANT]
 > Any changes you make to the configuration on the VM will not be recorded in the
 > deployment; they will be wiped out if the VM is redeployed.
 
