@@ -71,11 +71,30 @@ Commit this change to the new branch, then create a PR. After the PR has been me
 approve the corresponding Apply in the Terraform Cloud workspace. After about 5
 minutes the server will be available at `https://jupyter-dept.ssrc.condenser.arc.ucl.ac.uk`.
 
-Access to the server is controlled by the Azure AD application.
+Web access to the server is controlled by the Azure AD application.
 
 ### Administer a deployed JupyterHub server
 
-You can directly administer a deployed JupyterHub server. Any changes you make to the configuration on the VM will not be recorded in the deployment; they will be wiped out if the VM is redeployed.
+You can directly administer a deployed JupyterHub server, as described [here](https://z2jh.jupyter.org/en/stable/jupyterhub/customizing/extending-jupyterhub.html#applying-configuration-changes).
+
+> ![IMPORTANT]
+> Any changes you make to the configuration on the VM will not be recorded in the
+> deployment; they will be wiped out if the VM is redeployed.
+
+1. Log in to the server via SSH. You can obtain the IP address for the server in two ways:
+    1. In the Rancher GUI, the IP address is displayed as an attribute of the VM
+    2. In the Terraform Cloud workspace, under States, select the latest successfully applied state.
+2. Escalate privileges using `sudo su -`
+3. Modify `/root/jupyterhub_config.yaml` as desired
+4. Apply changes by running the following command:
+
+   ``` sh
+   helm upgrade --cleanup-on-fail \
+     --install jupyterhub jupyterhub/jupyterhub \
+     --namespace jupyterhub --create-namespace \
+     --version=3.3.8 \
+     --values jupyterhub_config.yaml
+   ```
 
 ## References
 
