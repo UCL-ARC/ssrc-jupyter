@@ -83,9 +83,11 @@ You can directly administer a deployed JupyterHub server, as described [here](ht
 
 1. Log in to the server via SSH. You can obtain the IP address for the server in
 two ways:
+
     1. In the Rancher GUI, the IP address is displayed as an attribute of the VM
     2. In the Terraform Cloud workspace, under States, select the latest successfully
     applied state.
+
 2. Escalate privileges using `sudo su -`
 3. Modify `/root/jupyterhub_config.yaml` as desired
 4. Apply changes by running the following command:
