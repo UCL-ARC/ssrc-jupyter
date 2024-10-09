@@ -2,6 +2,11 @@
 
 ![SSRC-Jupyter diagram](/docs/ssrc-jupyter.drawio.svg)
 
+[!IMPORTANT]
+The JupyterHub servers managed by this deployment should be considered at-risk.
+This means that no user data is backed up. User data will be lost when the VM
+running the server is redeployed or destroyed.
+
 ## Deploy
 
 Terraform Cloud workspace: university-college-london/ARC-SSRC-Condenser/[ssrc-jupyter](https://app.terraform.io/app/university-college-london/workspaces/ssrc-jupyter)
@@ -68,7 +73,9 @@ minutes the server will be available at `https://jupyter-dept.ssrc.condenser.arc
 
 Access to the server is controlled by the Azure AD application.
 
-### Administer an existing JupyterHub server
+### Administer a deployed JupyterHub server
+
+You can directly administer a deployed JupyterHub server. Any changes you make to the configuration on the VM will not be recorded in the deployment; they will be wiped out if the VM is redeployed.
 
 ## References
 
