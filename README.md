@@ -14,12 +14,12 @@ Terraform Cloud workspace: university-college-london/ARC-SSRC-Condenser/[ssrc-ju
 1. Populate the variables in Terraform Cloud
     - `aad_client_id`, terraform, Provided by the AAD application registration
     - `aad_client_secret`, terraform, sensitive, Provided by the AAD application
-    registration
+      registration
     - `aad_tenant_id`, terraform, Provided by the AAD application registration
     - `public_key_openssh`, terraform, HCL, A list of strings giving the public
-    SSH keys to be provided to the VMs in the deployment
+      SSH keys to be provided to the VMs in the deployment
     - `KUBECONFIG_DATA`, environment, sensitive, The base64 encoded kube_config
-    data to authenticate with the Harvester cluster
+      data to authenticate with the Harvester cluster
 2. Plan and Apply changes through Terraform Cloud
 
 ## Usage
@@ -82,11 +82,11 @@ You can directly administer a deployed JupyterHub server, as described [here](ht
 > deployment; they will be wiped out if the VM is redeployed.
 
 1. Log in to the server via SSH. You can obtain the IP address for the server in
-two ways:
+   two ways:
 
     1. In the Rancher GUI, the IP address is displayed as an attribute of the VM
     2. In the Terraform Cloud workspace, under States, select the latest successfully
-    applied state.
+       applied state.
 
 2. Escalate privileges using `sudo su -`
 3. Modify `/root/jupyterhub_config.yaml` as desired
