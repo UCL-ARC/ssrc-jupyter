@@ -24,7 +24,7 @@ resource "harvester_cloudinit_secret" "cloud-config-jupyter" {
     jupyterhub_config = indent(6, templatefile(
       "${path.module}/jupyterhub_config.yaml",
       {
-        hostname          = var.vm_prefix
+        root_url          = local.access_url
         aad_client_id     = var.aad_client_id
         aad_client_secret = var.aad_client_secret
         aad_tenant_id     = var.aad_tenant_id
