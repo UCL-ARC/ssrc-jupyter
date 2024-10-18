@@ -1,6 +1,6 @@
 locals {
   prefix     = var.vm_prefix
-  access_url = "${var.vm_prefix}.ucl-arc.dev/"
+  access_url = "${var.condenser_ingress_test_hostname}.ssrc.condenser.ucl.ac.uk"
 }
 
 data "harvester_image" "rhel9" {
@@ -24,10 +24,12 @@ resource "harvester_cloudinit_secret" "cloud-config-jupyter" {
     jupyterhub_config = indent(6, templatefile(
       "${path.module}/jupyterhub_config.yaml",
       {
-        hostname          = var.vm_prefix
+        root_url          = local.access_url
         aad_client_id     = var.aad_client_id
         aad_client_secret = var.aad_client_secret
         aad_tenant_id     = var.aad_tenant_id
+        image             = var.jupyter_image
+        image_tag         = var.jupyter_image_tag
       }
       )
     )

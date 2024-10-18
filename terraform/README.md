@@ -16,8 +16,8 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_online-storage-dept"></a> [online-storage-dept](#module\_online-storage-dept) | ./modules/online-storage | n/a |
-| <a name="module_ssrc-jupyter-dept"></a> [ssrc-jupyter-dept](#module\_ssrc-jupyter-dept) | ./modules/jupyter | n/a |
+| <a name="module_online-storage-pilot"></a> [online-storage-pilot](#module\_online-storage-pilot) | ./modules/online-storage | n/a |
+| <a name="module_ssrc-jupyter-pilot"></a> [ssrc-jupyter-pilot](#module\_ssrc-jupyter-pilot) | ./modules/jupyter | n/a |
 
 ## Resources
 
@@ -27,14 +27,17 @@ No resources.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_aad_client_id"></a> [aad\_client\_id](#input\_aad\_client\_id) | n/a | `string` | n/a | yes |
-| <a name="input_aad_client_secret"></a> [aad\_client\_secret](#input\_aad\_client\_secret) | n/a | `string` | n/a | yes |
-| <a name="input_aad_tenant_id"></a> [aad\_tenant\_id](#input\_aad\_tenant\_id) | n/a | `string` | n/a | yes |
-| <a name="input_public_key_openssh"></a> [public\_key\_openssh](#input\_public\_key\_openssh) | Public SSH key installed on the VM | `list(string)` | n/a | yes |
+| <a name="input_aad_client_id"></a> [aad\_client\_id](#input\_aad\_client\_id) | Managed in TFC | `string` | n/a | yes |
+| <a name="input_aad_client_secret"></a> [aad\_client\_secret](#input\_aad\_client\_secret) | Managed in TFC | `string` | n/a | yes |
+| <a name="input_aad_tenant_id"></a> [aad\_tenant\_id](#input\_aad\_tenant\_id) | Managed in TFC | `string` | n/a | yes |
+| <a name="input_public_key_openssh"></a> [public\_key\_openssh](#input\_public\_key\_openssh) | Public SSH key installed on the VMs. Managed in TFC | `list(string)` | n/a | yes |
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_jupyter_ip_addr"></a> [jupyter\_ip\_addr](#output\_jupyter\_ip\_addr) | IP Address(es) for the JupyterHub Server VMs |
+| <a name="output_jupyter_url"></a> [jupyter\_url](#output\_jupyter\_url) | URL where JupyterHub server can be accessed |
 
 ---
 <!-- END_TF_DOCS -->

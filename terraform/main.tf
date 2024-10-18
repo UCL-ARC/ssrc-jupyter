@@ -1,16 +1,16 @@
-module "ssrc-jupyter-dept" {
+module "ssrc-jupyter-pilot" {
   source = "./modules/jupyter"
 
   vm_count = 1
 
   vcpu       = 4
   ram_gb     = "16Gi"
-  os_disk_gb = "50Gi"
+  os_disk_gb = "100Gi"
 
-  vm_prefix = "jupyter-dept"
+  vm_prefix = "jupyter-pilot"
 
   namespace    = "ssrc-ns"
-  network_name = "ssrc-net-0"
+  network_name = "ssrc-net"
 
   public_key_openssh = var.public_key_openssh
 
@@ -22,16 +22,19 @@ module "ssrc-jupyter-dept" {
   aad_client_secret = var.aad_client_secret
   aad_tenant_id     = var.aad_tenant_id
 
+  jupyter_image     = "jupyter/datascience-notebook"
+  jupyter_image_tag = "x86_64-ubuntu-22.04"
+
   condenser_ingress_isEnabled     = true
-  condenser_ingress_test_hostname = "jupyter-dept"
+  condenser_ingress_test_hostname = "jupyter-pilot"
 }
 
-module "online-storage-dept" {
+module "online-storage-pilot" {
   source = "./modules/online-storage"
 
   namespace    = "ssrc-ns"
-  network_name = "ssrc-net-0"
-  vm_prefix    = "ssrc-nfs-dept"
+  network_name = "ssrc-net"
+  vm_prefix    = "ssrc-nfs-pilot"
 
   disk_settings = {
 

@@ -15,7 +15,7 @@ hub:
     AzureAdOAuthenticator:
       client_id: ${aad_client_id}
       client_secret: ${aad_client_secret}
-      oauth_callback_url: https://${hostname}.ssrc.condenser.arc.ucl.ac.uk/hub/oauth_callback
+      oauth_callback_url: https://${root_url}/hub/oauth_callback
       tenant_id: ${aad_tenant_id}
       allow_all: true
     JupyterHub:
@@ -29,8 +29,8 @@ singleuser:
     # https://hub.docker.com/r/jupyter/datascience-notebook/tags/
     # Inspect the Dockerfile at:
     # https://github.com/jupyter/docker-stacks/tree/HEAD/datascience-notebook/Dockerfile
-    name: jupyter/datascience-notebook
-    tag: x86_64-ubuntu-22.04
+    name: ${image}
+    tag: ${image_tag}
   # `cmd: null` allows the custom CMD of the Jupyter docker-stacks to be used
   # which performs further customization on startup.
   cmd: null

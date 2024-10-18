@@ -75,3 +75,13 @@ variable "calico_version" {
   type        = string
   description = "Version of calico"
 }
+
+variable "jupyter_image" {
+  type        = string
+  description = "Name of Jupyter notebook container image (see https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html)"
+}
+
+variable "jupyter_image_tag" {
+  type        = string
+  description = "Tag for Jupyter notebook container image"
+}
