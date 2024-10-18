@@ -5,12 +5,12 @@ module "ssrc-jupyter-dept" {
 
   vcpu       = 4
   ram_gb     = "16Gi"
-  os_disk_gb = "50Gi"
+  os_disk_gb = "100Gi"
 
-  vm_prefix = "jupyter-dept"
+  vm_prefix = "jupyter-pilot"
 
   namespace    = "ssrc-ns"
-  network_name = "ssrc-net-0"
+  network_name = "ssrc-net"
 
   public_key_openssh = var.public_key_openssh
 
@@ -23,7 +23,7 @@ module "ssrc-jupyter-dept" {
   aad_tenant_id     = var.aad_tenant_id
 
   condenser_ingress_isEnabled     = true
-  condenser_ingress_test_hostname = "jupyter-dept"
+  condenser_ingress_test_hostname = "jupyter-pilot"
 }
 
 module "online-storage-dept" {
