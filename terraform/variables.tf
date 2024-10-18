@@ -4,17 +4,17 @@ variable "public_key_openssh" {
 }
 
 variable "aad_client_id" {
-  type = string
+  type        = string
   description = "Managed in TFC"
 }
 
 variable "aad_client_secret" {
-  type      = string
-  sensitive = true
+  type        = string
+  sensitive   = true
   description = "Managed in TFC"
 }
 
 variable "aad_tenant_id" {
-  type = string
+  type        = string
   description = "Managed in TFC"
 }

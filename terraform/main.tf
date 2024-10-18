@@ -22,8 +22,8 @@ module "ssrc-jupyter-pilot" {
   aad_client_secret = var.aad_client_secret
   aad_tenant_id     = var.aad_tenant_id
 
-  jupyter_image = "jupyter/datascience-notebook"
-  jupyter_image_tag = "x86_64-ubuntu-22.04" 
+  jupyter_image     = "jupyter/datascience-notebook"
+  jupyter_image_tag = "x86_64-ubuntu-22.04"
 
   condenser_ingress_isEnabled     = true
   condenser_ingress_test_hostname = "jupyter-pilot"

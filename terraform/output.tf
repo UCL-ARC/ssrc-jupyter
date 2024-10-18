@@ -4,6 +4,6 @@ output "jupyter_ip_addr" {
 }
 
 output "jupyter_url" {
-    value = module.ssrc-jupyter-pilot.url
-    description = "URL where JupyterHub server can be accessed"
+  value       = module.ssrc-jupyter-pilot.url
+  description = "URL where JupyterHub server can be accessed"
 }
