@@ -28,6 +28,8 @@ resource "harvester_cloudinit_secret" "cloud-config-jupyter" {
         aad_client_id     = var.aad_client_id
         aad_client_secret = var.aad_client_secret
         aad_tenant_id     = var.aad_tenant_id
+        image = var.jupyter_image
+        image_tag = var.jupyter_image_tag
       }
       )
     )
