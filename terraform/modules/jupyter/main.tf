@@ -1,6 +1,6 @@
 locals {
   prefix     = var.vm_prefix
-  access_url = "${var.condenser_ingress_test_hostname}.ssrc.condenser.ucl.ac.uk"
+  access_url = "${var.condenser_ingress_test_hostname}.ssrc.condenser.arc.ucl.ac.uk"
 }
 
 data "harvester_image" "rhel9" {
