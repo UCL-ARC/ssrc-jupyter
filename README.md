@@ -82,10 +82,10 @@ You can directly administer a deployed JupyterHub server, as described [here](ht
 > deployment; they will be wiped out if the VM is redeployed.
 
 1. Log in to the server via SSH.
-   - You can obtain the IP address for the server in [Terraform Cloud](https://app.terraform.io/app/university-college-london/workspaces/ssrc-dept-vms),
-     under Outputs, or in the Rancher GUI under the `ssrc-ns` namespace.
-   - The SSH keys for each VM are managed in [Terraform Cloud](https://app.terraform.io/app/university-college-london/workspaces/ssrc-dept-vms),
-     under Variables.
+    - You can obtain the IP address for the server in [Terraform Cloud](https://app.terraform.io/app/university-college-london/workspaces/ssrc-dept-vms),
+      under Outputs, or in the Rancher GUI under the `ssrc-ns` namespace.
+    - The SSH keys for each VM are managed in [Terraform Cloud](https://app.terraform.io/app/university-college-london/workspaces/ssrc-dept-vms),
+      under Variables.
 2. Escalate privileges using `sudo su -`
 3. Modify `/root/jupyterhub_config.yaml` as desired
 4. Apply changes by running the following command:
