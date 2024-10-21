@@ -7,6 +7,12 @@
 > This means that no user data is backed up. User data will be lost when the VM
 > running the server is redeployed or destroyed.
 
+## Access
+
+Access to the servers is managed by AD groups. The server URLs can be found in
+the [Terraform Cloud](https://app.terraform.io/app/university-college-london/workspaces/ssrc-jupyter)
+workspace under the outputs tab.
+
 ## Deploy
 
 Terraform Cloud workspace: university-college-london/ARC-SSRC-Condenser/[ssrc-jupyter](https://app.terraform.io/app/university-college-london/workspaces/ssrc-jupyter)
