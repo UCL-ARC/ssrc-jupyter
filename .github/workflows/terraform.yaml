@@ -32,7 +32,7 @@ jobs:
         uses: hashicorp/setup-terraform@b9cd54a3c349d3f38e8881555d616ced269862dd # v3.1.2
         with:
           # renovate: datasource=github-tags depName=hashicorp/terraform versioning=loose
-          terraform_version: 1.9.6
+          terraform_version: 1.9.8
 
       # Initialize a new or existing Terraform working directory by
       # creating initial files, loading any remote state, downloading
