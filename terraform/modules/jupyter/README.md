@@ -37,7 +37,7 @@ No modules.
 | <a name="input_condenser_ingress_isEnabled"></a> [condenser\_ingress\_isEnabled](#input\_condenser\_ingress\_isEnabled) | Enable web access to the server | `bool` | n/a | yes |
 | <a name="input_condenser_ingress_test_hostname"></a> [condenser\_ingress\_test\_hostname](#input\_condenser\_ingress\_test\_hostname) | Part of the URL for the web application | `string` | n/a | yes |
 | <a name="input_jupyter_image"></a> [jupyter\_image](#input\_jupyter\_image) | Name of Jupyter notebook container image (see https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html) | `string` | n/a | yes |
-| <a name="input_jupyter_image_tag"></a> [jupyter\_image\_tag](#input\_jupyter\_image\_tag) | Tag for Jupyter notebook container image | `string` | n/a | yes |
+| <a name="input_jupyter_image_version"></a> [jupyter\_image\_version](#input\_jupyter\_image\_version) | Docker tag for Jupyter notebook container image | `string` | n/a | yes |
 | <a name="input_k3s_version"></a> [k3s\_version](#input\_k3s\_version) | Version of k3s | `string` | n/a | yes |
 | <a name="input_namespace"></a> [namespace](#input\_namespace) | Name of the SSRC namespace | `string` | n/a | yes |
 | <a name="input_network_name"></a> [network\_name](#input\_network\_name) | Name of the SSRC network | `string` | n/a | yes |
