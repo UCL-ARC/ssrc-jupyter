@@ -4,9 +4,10 @@
   customManagers: [
     {
       "customType": "regex",
-      "fileMatch": ["^.*\\.y.?ml$"],
+      "fileMatch": ["^.*\\.y.?ml$|^.*\\.tf$"],
       "matchStrings": [
-        '#\\srenovate:\\sdatasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s*.*?_version:\\s*(?<currentValue>.*)\\s*'
+        '#\\srenovate:\\sdatasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s*.*?_version:\\s*(?<currentValue>.*)\\s*',
+        '#\\srenovate:\\sdatasource=(?<datasource>.*?) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s*.*?_version\\s*=\\s*\\"(?<currentValue>.*)\\"'
         ],
       "versioningTemplate": "{{#if versioning}}{{{versioning}}}{{else}}semver{{/if}}"
     }
