@@ -81,7 +81,7 @@ variable "jupyter_image" {
   description = "Name of Jupyter notebook container image (see https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html)"
 }
 
-variable "jupyter_image_tag" {
+variable "jupyter_image_version" {
   type        = string
-  description = "Tag for Jupyter notebook container image"
+  description = "Docker tag for Jupyter notebook container image"
 }
