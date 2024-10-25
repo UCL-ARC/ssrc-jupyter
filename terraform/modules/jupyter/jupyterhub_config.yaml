@@ -23,8 +23,10 @@ hub:
     KubeSpawner:
       k8s_api_request_timeout: 300
 singleuser:
-  extraEnv: 
+  extraEnv:
     GRANT_SUDO: "yes"
+    NOTEBOOK_ARGS: "--allow-root"
+  uid: 0
   allowPrivilegeEscalation: true
   image:
     # Other images: https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html
