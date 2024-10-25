@@ -16,6 +16,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
+| <a name="module_jupyter-dev"></a> [jupyter-dev](#module\_jupyter-dev) | ./modules/jupyter | n/a |
 | <a name="module_online-storage-pilot"></a> [online-storage-pilot](#module\_online-storage-pilot) | ./modules/online-storage | n/a |
 | <a name="module_ssrc-jupyter-pilot"></a> [ssrc-jupyter-pilot](#module\_ssrc-jupyter-pilot) | ./modules/jupyter | n/a |
 
