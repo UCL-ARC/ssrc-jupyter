@@ -90,10 +90,4 @@ resource "harvester_virtualmachine" "vm" {
   cloudinit {
     user_data_secret_name = harvester_cloudinit_secret.cloud-config-jupyter.name
   }
-
-  lifecycle {
-    replace_triggered_by = [
-      harvester_cloudinit_secret.cloud-config-jupyter.user_data
-    ]
-  }
 }
