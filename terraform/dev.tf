@@ -30,7 +30,7 @@ module "jupyter-dev" {
   jupyter_image_version = "x86_64-ubuntu-22.04"
 
   condenser_ingress_isEnabled     = true
-  condenser_ingress_dev_hostname = "jupyter-dev"
+  condenser_ingress_test_hostname = "jupyter-dev"
 }
 
 module "online-storage-dev" {
