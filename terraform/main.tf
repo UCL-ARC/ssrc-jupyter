@@ -3,8 +3,8 @@ module "ssrc-jupyter-pilot" {
 
   vm_count = 1
 
-  vcpu       = 4
-  ram_gb     = "16Gi"
+  vcpu       = 64
+  ram_gb     = "256Gi"
   os_disk_gb = "100Gi"
 
   vm_prefix = "jupyter-pilot"
