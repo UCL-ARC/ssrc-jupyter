@@ -23,6 +23,9 @@ hub:
     KubeSpawner:
       k8s_api_request_timeout: 300
 singleuser:
+  extraEnv: 
+    GRANT_SUDO: "yes"
+  allowPrivilegeEscalation: true
   image:
     # Other images: https://jupyter-docker-stacks.readthedocs.io/en/latest/using/selecting.html
     # You should replace the "latest" tag with a fixed version from:
