@@ -33,7 +33,7 @@ module "jupyter-dev" {
   condenser_ingress_dev_hostname = "jupyter-dev"
 }
 
-module "online-storage-pilot" {
+module "online-storage-dev" {
   source = "./modules/online-storage"
 
   namespace    = "ssrc-ns"
