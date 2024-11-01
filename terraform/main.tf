@@ -19,7 +19,7 @@ module "ssrc-jupyter-pilot" {
   # renovate: datasource=github-releases depName=k3s-io/k3s versioning=loose
   k3s_version = "v1.31.2+k3s1" # https://github.com/k3s-io/k3s/releases/
   # renovate: datasource=github-releases depName=projectcalico/calico versioning=loose
-  calico_version = "v3.28.2" # https://github.com/projectcalico/calico/releases
+  calico_version = "v3.29.0" # https://github.com/projectcalico/calico/releases
 
   aad_client_id     = var.aad_client_id
   aad_client_secret = var.aad_client_secret
