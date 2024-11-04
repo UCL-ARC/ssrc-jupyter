@@ -5,13 +5,13 @@
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_harvester"></a> [harvester](#requirement\_harvester) | 0.6.4 |
+| <a name="requirement_harvester"></a> [harvester](#requirement\_harvester) | 0.6.5 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_harvester"></a> [harvester](#provider\_harvester) | 0.6.4 |
+| <a name="provider_harvester"></a> [harvester](#provider\_harvester) | 0.6.5 |
 
 ## Modules
 
@@ -21,10 +21,10 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [harvester_cloudinit_secret.server](https://registry.terraform.io/providers/harvester/harvester/0.6.4/docs/resources/cloudinit_secret) | resource |
-| [harvester_virtualmachine.server](https://registry.terraform.io/providers/harvester/harvester/0.6.4/docs/resources/virtualmachine) | resource |
-| [harvester_volume.mount-disk](https://registry.terraform.io/providers/harvester/harvester/0.6.4/docs/resources/volume) | resource |
-| [harvester_image.rhel9](https://registry.terraform.io/providers/harvester/harvester/0.6.4/docs/data-sources/image) | data source |
+| [harvester_cloudinit_secret.server](https://registry.terraform.io/providers/harvester/harvester/0.6.5/docs/resources/cloudinit_secret) | resource |
+| [harvester_virtualmachine.server](https://registry.terraform.io/providers/harvester/harvester/0.6.5/docs/resources/virtualmachine) | resource |
+| [harvester_volume.mount-disk](https://registry.terraform.io/providers/harvester/harvester/0.6.5/docs/resources/volume) | resource |
+| [harvester_image.rhel9](https://registry.terraform.io/providers/harvester/harvester/0.6.5/docs/data-sources/image) | data source |
 
 ## Inputs
 
