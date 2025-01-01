@@ -24,7 +24,7 @@ jobs:
         uses: hashicorp/setup-terraform@b9cd54a3c349d3f38e8881555d616ced269862dd # v3.1.2
         with:
           # renovate: datasource=github-tags depName=hashicorp/terraform versioning=loose
-          terraform_version: 1.9.8
+          terraform_version: 1.10.3
 
       - name: Run pre-commit
         uses: pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd # v3.0.1
