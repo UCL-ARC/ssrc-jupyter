@@ -5,7 +5,7 @@ module "jupyter-dev" {
 
   vcpu       = 2
   ram_gb     = "8Gi"
-  os_disk_gb = "50Gi"
+  os_disk_gb = "30Gi"
 
   vm_prefix = "jupyter-dev"
 
@@ -31,18 +31,4 @@ module "jupyter-dev" {
 
   condenser_ingress_isEnabled     = true
   condenser_ingress_test_hostname = "jupyter-dev"
-}
-
-module "online-storage-dev" {
-  source = "./modules/online-storage"
-
-  namespace    = "ssrc-ns"
-  network_name = "ssrc-net"
-  vm_prefix    = "jupyter-dev-storage"
-
-  disk_settings = {
-    mountdisk1 = "10Gi"
-  }
-
-  public_key_openssh = var.public_key_openssh
 }
