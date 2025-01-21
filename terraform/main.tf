@@ -32,17 +32,3 @@ module "ssrc-jupyter-pilot" {
   condenser_ingress_isEnabled     = true
   condenser_ingress_test_hostname = "jupyter-pilot"
 }
-
-module "online-storage-pilot" {
-  source = "./modules/online-storage"
-
-  namespace    = "ssrc-ns"
-  network_name = "ssrc-net"
-  vm_prefix    = "ssrc-nfs-pilot"
-
-  disk_settings = {
-
-  }
-
-  public_key_openssh = var.public_key_openssh
-}
