@@ -5,7 +5,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | 1.9.8 |
+| <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >1.9.8 |
 | <a name="requirement_harvester"></a> [harvester](#requirement\_harvester) | 0.6.4 |
 
 ## Providers
@@ -16,6 +16,7 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
+| <a name="module_jupyter-dev"></a> [jupyter-dev](#module\_jupyter-dev) | ./modules/jupyter | n/a |
 | <a name="module_online-storage-pilot"></a> [online-storage-pilot](#module\_online-storage-pilot) | ./modules/online-storage | n/a |
 | <a name="module_ssrc-jupyter-pilot"></a> [ssrc-jupyter-pilot](#module\_ssrc-jupyter-pilot) | ./modules/jupyter | n/a |
 
