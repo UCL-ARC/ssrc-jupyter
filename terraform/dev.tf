@@ -17,7 +17,7 @@ module "jupyter-dev" {
   # renovate: datasource=github-releases depName=jupyterhub/zero-to-jupyterhub-k8s versioning=loose
   z2jupyterhub_version = "3.3.8" # https://github.com/jupyterhub/zero-to-jupyterhub-k8s/tags
   # renovate: datasource=github-releases depName=k3s-io/k3s versioning=loose
-  k3s_version = "v1.31.2+k3s1" # https://github.com/k3s-io/k3s/releases/
+  k3s_version = "v1.32.2+k3s1" # https://github.com/k3s-io/k3s/releases/
   # renovate: datasource=github-releases depName=projectcalico/calico versioning=loose
   calico_version = "v3.29.0" # https://github.com/projectcalico/calico/releases
 
