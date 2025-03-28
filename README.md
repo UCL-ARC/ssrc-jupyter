@@ -3,21 +3,15 @@
 ![SSRC-Jupyter diagram](/docs/ssrc-jupyter.drawio.svg)
 
 > [!IMPORTANT]
-> The JupyterHub servers managed by this deployment should be considered at-risk.
-> This means that no user data is backed up. User data will be lost when the VM
-> running the server is redeployed or destroyed.
+> This project has been retired.
 
 ## Access
 
-Access to the servers is managed by AD groups. The server URLs can be found in
-the [Terraform Cloud](https://app.terraform.io/app/university-college-london/workspaces/ssrc-jupyter)
-workspace under the outputs tab.
+Access to the servers is managed by AD groups.
 
 ## Deploy
 
-Terraform Cloud workspace: university-college-london/ARC-SSRC-Condenser/[ssrc-jupyter](https://app.terraform.io/app/university-college-london/workspaces/ssrc-jupyter)
-
-1. Populate the variables in Terraform Cloud
+1. Populate the variables
     - `aad_client_id`, terraform, Provided by the AAD application registration
     - `aad_client_secret`, terraform, sensitive, Provided by the AAD application
       registration
@@ -26,7 +20,7 @@ Terraform Cloud workspace: university-college-london/ARC-SSRC-Condenser/[ssrc-ju
       SSH keys to be provided to the VMs in the deployment
     - `KUBECONFIG_DATA`, environment, sensitive, The base64 encoded kube_config
       data to authenticate with the Harvester cluster
-2. Plan and Apply changes through Terraform Cloud
+2. Plan and Apply changes
 
 ## Usage
 
@@ -73,8 +67,7 @@ module "ssrc-jupyter-dept" {   # REPLACE dept
 In the above example, replace `dept` with an appropriate name for the server where
 indicated. You may also modify the VM's compute resources as indicated.
 
-Commit this change to the new branch, then create a PR. After the PR has been merged,
-approve the corresponding Apply in the Terraform Cloud workspace. After about 5
+Commit this change to the new branch, then create a PR. After about 5
 minutes the server will be available to log in.
 
 Web access to the server is controlled by the Azure AD application.
@@ -88,10 +81,6 @@ You can directly administer a deployed JupyterHub server, as described [here](ht
 > deployment; they will be wiped out if the VM is redeployed.
 
 1. Log in to the server via SSH.
-    - You can obtain the IP address for the server in [Terraform Cloud](https://app.terraform.io/app/university-college-london/workspaces/ssrc-dept-vms),
-      under Outputs, or in the Rancher GUI under the `ssrc-ns` namespace.
-    - The SSH keys for each VM are managed in [Terraform Cloud](https://app.terraform.io/app/university-college-london/workspaces/ssrc-dept-vms),
-      under Variables.
 2. Escalate privileges using `sudo su -`
 3. Modify `/root/jupyterhub_config.yaml` as desired
 4. Apply changes by running the following command:
